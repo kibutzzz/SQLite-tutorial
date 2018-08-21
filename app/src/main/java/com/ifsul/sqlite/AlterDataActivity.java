@@ -14,7 +14,7 @@ public class AlterDataActivity extends AppCompatActivity {
     EditText autor;
     EditText editora;
     Button alterar;
-    Button Deletar;
+    Button deletar;
 
     Cursor cursor;
     String codigo;
@@ -48,6 +48,17 @@ public class AlterDataActivity extends AppCompatActivity {
                         livro.getText().toString(),
                         autor.getText().toString(),
                         editora.getText().toString());
+                startActivity(new Intent(AlterDataActivity.this, MainActivity.class));
+                finish();
+            }
+        });
+
+        deletar = findViewById(R.id.button3);
+
+        deletar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                crud.deletaRegistro(Integer.parseInt(codigo));
                 startActivity(new Intent(AlterDataActivity.this, MainActivity.class));
                 finish();
             }
