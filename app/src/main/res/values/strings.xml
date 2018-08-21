@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SQLite</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="editora">Editora:</string>
+    <string name="autor">Autor:</string>
+    <string name="titulo">Titulo:</string>
+</resources>
