@@ -86,4 +86,11 @@ public class BancoController {
 
 
     }
+
+    public void deletaRegistro (int id){
+        String where = CriaBanco.ID + " = " + id;
+        db = banco.getReadableDatabase();
+        db.delete(CriaBanco.TABELA, where,null);
+        db.close();
+    }
 }
